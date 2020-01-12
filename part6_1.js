@@ -10,9 +10,11 @@ graph.peggy = [];
 graph.thom = [];
 graph.jonny = [];
 
+// console.log(graph);
 const search = (name) => {
   let searchQueue = [];
   searchQueue = searchQueue.concat(graph[name]);
+  // console.log(searchQueue);
   // This array is how you keep track of which people you've searched before.
   const searched = [];
   while (searchQueue.length) {
@@ -24,8 +26,10 @@ const search = (name) => {
         return true;
       }
       searchQueue = searchQueue.concat(graph[person]);
+      // console.log(searchQueue);
       // Marks this person as searched
       searched.push(person);
+      // console.log(searched);
     }
   }
   return false;
