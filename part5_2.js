@@ -6,9 +6,11 @@ const checkVoter = (name) => {
     voted[name] = true;
     console.log('let them vote!');
   }
+
+  console.log(voted);
 };
 
 
 checkVoter('tom'); // let them vote!
 checkVoter('mike'); // let them vote!
-checkVoter('mike'); // kick them out!
+checkVoter('mike'); // kick them out! 
